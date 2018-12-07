@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.about {
+  padding: 7vw;
+  background: linear-gradient(
+      to bottom,
+      rgba(22, 22, 22, 0.1) 0,
+      rgba(22, 22, 22, 0.5) 75%,
+      #16161699 100%
+    ),
+    url(images/about.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.gallery {
+  position: relative;
+}
+
+.gallery__title {
+  margin: 0;
+  padding: 30px;
+}
+
+.why {
+  padding-top: 2px;
+}
+
+.why__1 {
+  background: linear-gradient(
+      to bottom,
+      rgba(22, 22, 22, 0.1) 0,
+      rgba(22, 22, 22, 0.5) 75%,
+      #16161699 100%
+    ),
+    url(images/view.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  padding: 7vw;
+}
+
+.why__2 {
+  background: linear-gradient(
+      to bottom,
+      rgba(22, 22, 22, 0.1) 0,
+      rgba(22, 22, 22, 0.5) 75%,
+      #16161699 100%
+    ),
+    url(images/easy.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  padding: 7vw;
+}
+
+.why__3 {
+  background: linear-gradient(
+      to bottom,
+      rgba(22, 22, 22, 0.1) 0,
+      rgba(22, 22, 22, 0.5) 75%,
+      #16161699 100%
+    ),
+    url(images/free.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  padding: 7vw;
+}
+
+.siema__image {
+  max-height: 90vh;
+  width: 100%;
+}
+
+.arrow {
+  position: absolute;
+}
+
+.arrow__left {
+  top: 50%;
+  height: 50px;
+  left: 0;
+}
+
+.arrow__right {
+  top: 50%;
+  height: 50px;
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.review {
+  padding-top: 2px;
+  position: relative;
+}
+
+.review__item {
+  background-color: white;
+  color: black;
+  padding: 20px 60px;
+}
+
+.review__item > p {
+  border-top: solid;
+  padding-top: 10px;
+}
+
+.location {
+  padding-top: 2px;
+}
+
+#mapid {
+  width: 100%;
+  min-height: 70vh;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+}
+
+.footer > h2 {
+  width: 100%;
+}
+
+.footer > section {
+  padding: 20px;
+}
+
+.footer > section > a {
+  color: white;
+  text-decoration: none;
+}

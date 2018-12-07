@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Padang Kesna</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Padang Kesna Overview">
+    <meta name="theme-color" content="#FFFFFF"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+   	<link rel="shortcut icon" href="https://a0.muscache.com/airbnb/static/logotype_favicon-21cc8e6c6a2cca43f061d2dcabdf6e58.ico">
+  	<link rel="apple-touch-icon" href="https://a0.muscache.com/airbnb/static/icons/apple-touch-icon-76x76-3b313d93b1b5823293524b9764352ac9.png">
+  	<link rel="manifest" href="/manifest.webmanifest">
+  	<link rel="stylesheet" href="/src/styles.css">
+  	<style>
+      body {
+        font-family: sans-serif;
+        margin: 0px;
+        color: white;
+        text-align: center;
+        background-color: #181818;
+      }
+
+      .nav {
+        height: 50px;
+        width: 100%;
+        background-color: #4d4d4d;
+        position: fixed;
+        transition: top 0.3s;
+        z-index: 1;
+        text-align: left;
+      }
+
+      .nav > .nav-header {
+        display: inline;
+      }
+
+      .nav > .nav-header > .nav-title {
+        display: inline-block;
+        font-size: 22px;
+        color: #fff;
+        padding: 10px 10px 10px 10px;
+      }
+
+      .nav > .nav-btn {
+        display: none;
+      }
+
+      .nav > .nav-links {
+        display: inline;
+        float: right;
+        font-size: 18px;
+      }
+
+      .nav > .nav-links > a {
+        display: inline-block;
+        padding: 13px 10px 13px 10px;
+        text-decoration: none;
+        color: #efefef;
+      }
+
+      .nav > .nav-links > a:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+
+      .nav > #nav-check {
+        display: none;
+      }
+
+      @media (max-width: 600px) {
+        .nav > .nav-btn {
+          display: inline-block;
+          position: absolute;
+          right: 0px;
+          top: 0px;
+        }
+        .nav > .nav-btn > label {
+          display: inline-block;
+          width: 50px;
+          height: 50px;
+          padding: 13px;
+        }
+        .nav > .nav-btn > label:hover {
+          background-color: rgba(0, 0, 0, 0.3);
+        }
+        .nav > .nav-btn > label > span {
+          display: block;
+          width: 25px;
+          height: 10px;
+          border-top: 2px solid #eee;
+        }
+        .nav > .nav-links {
+          position: absolute;
+          display: block;
+          width: 100%;
+          background-color: #333;
+          height: 0px;
+          transition: all 0.3s ease-in;
+          overflow-y: hidden;
+          top: 50px;
+          left: 0px;
+        }
+        .nav > .nav-links > a {
+          display: block;
+          width: 100%;
+        }
+        .nav > #nav-check:not(:checked) + .nav-links {
+          height: 0px;
+        }
+        .nav > #nav-check:checked + .nav-links {
+          height: calc(100vh - 50px);
+        }
+      }
+
+      .header {
+        height: 100vh;
+        background: linear-gradient(
+            to bottom,
+            rgba(22, 22, 22, 0.1) 0,
+            rgba(22, 22, 22, 0.5) 75%,
+            #16161699 100%
+          ),
+          url(src/images/home.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+      }
+
+      .header__container {
+        padding-top: 35vh;
+      }
+
+      .header__h1 {
+        margin: 0;
+      }
+  	</style>
+  </head>
+
+  <body id="app">
+    <nav class="nav">
+      <div class="nav-header">
+        <div class="nav-title">
+          Padang Kesna
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+      <input type="checkbox" id="nav-check">
+      <div class="nav-links">
+        <a href="#app">Home</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#location">Location</a>
+      </div>
+    </nav>
+
+    <main>
+      <header class="header">
+        <div class="header__container">
+          <h1 class="header__h1">Padang Kesna Temukus</h1>
+          <p class="header__p">A Garden full of edelweiss flower</p>
+        </div>
+      </header>
+      <section id="about" class="about">
+        <h1>Created By Local People</h1>
+        <p>Padang Kasna Temukus is created and financed by local people who mostly sell edelwiss flowers at the market. Padang Kasna Temukus name come from local people who say edelwiss flowers as Kasna flowers.</p>
+      </section>
+      <section id="gallery" class="gallery">
+        <h1 class="gallery__title">Photo Gallery</h1>
+        <div class="siema">
+          <picture>
+              <source media="(max-width: 425px)" srcset="src/images/13-425.webp" type="image/webp">
+              <source media="(min-width: 426px)" srcset="src/images/13.webp" type="image/webp">
+              <source media="(max-width: 425px)" srcset="src/images/13-425.jpg" type="image/jpeg">
+              <source media="(min-width: 426px)" srcset="src/images/13.jpg" type="image/jpeg">
+              <img src="src/images/13.jpg" class="siema__image" alt="Woman seeing sky">
+          </picture>
+          <picture>
+              <source media="(max-width: 425px)" srcset="src/images/16-425.webp" type="image/webp">
+              <source media="(min-width: 426px)" srcset="src/images/16.webp" type="image/webp">
+              <source media="(max-width: 425px)" srcset="src/images/16-425.jpg" type="image/jpeg">
+              <source media="(min-width: 426px)" srcset="src/images/16.jpg" type="image/jpeg">
+              <img src="src/images/16.jpg" class="siema__image" alt="Woman playing with flower">
+          </picture>
+          <picture>
+              <source media="(max-width: 425px)" srcset="src/images/17-425.webp" type="image/webp">
+              <source media="(min-width: 426px)" srcset="src/images/17.webp" type="image/webp">
+              <source media="(max-width: 425px)" srcset="src/images/17-425.jpg" type="image/jpeg">
+              <source media="(min-width: 426px)" srcset="src/images/17.jpg" type="image/jpeg">
+              <img src="src/images/17.jpg" class="siema__image" alt="Man playing with fabric">
+          </picture>
+          <picture>
+              <source media="(max-width: 425px)" srcset="src/images/12-425.webp" type="image/webp">
+              <source media="(min-width: 426px)" srcset="src/images/12.webp" type="image/webp">
+              <source media="(max-width: 425px)" srcset="src/images/12-425.jpg" type="image/jpeg">
+              <source media="(min-width: 426px)" srcset="src/images/12.jpg" type="image/jpeg">
+              <img src="src/images/12.jpg" class="siema__image" alt="Woman seeing sky">
+          </picture>
+          <picture>
+              <source media="(max-width: 425px)" srcset="src/images/14-425.webp" type="image/webp">
+              <source media="(min-width: 426px)" srcset="src/images/14.webp" type="image/webp">
+              <source media="(max-width: 425px)" srcset="src/images/14-425.jpg" type="image/jpeg">
+              <source media="(min-width: 426px)" srcset="src/images/14.jpg" type="image/jpeg">
+              <img src="src/images/14.jpg" class="siema__image"" alt="Man seeing camera">
+          </picture>
+          <picture>
+              <source media="(max-width: 425px)" srcset="src/images/15-425.webp" type="image/webp">
+              <source media="(min-width: 426px)" srcset="src/images/15.webp" type="image/webp">
+              <source media="(max-width: 425px)" srcset="src/images/15-425.jpg" type="image/jpeg">
+              <source media="(min-width: 426px)" srcset="src/images/15.jpg" type="image/jpeg">
+              <img src="src/images/15.jpg" class="siema__image" alt="Two woman in edelweiss">
+          </picture>
+          <picture>
+              <source media="(max-width: 425px)" srcset="src/images/4-425.webp" type="image/webp">
+              <source media="(min-width: 426px)" srcset="src/images/4.webp" type="image/webp">
+              <source media="(max-width: 425px)" srcset="src/images/4-425.jpg" type="image/jpeg">
+              <source media="(min-width: 426px)" srcset="src/images/4.jpg" type="image/jpeg">
+              <img src="src/images/4.jpg" class="siema__image" alt="Man seeing camera">
+          </picture>
+        </div>
+        <img src="src/images/arrow_left.svg" id="galLeft" class="arrow arrow__left" alt="Arrow Left" />
+        <img src="src/images/arrow_left.svg" id="galRight" class="arrow arrow__right" alt="Arrow Rigth" />
+      </section>
+      <section class="why">
+        <h1>Why ?</h1>
+        <div class="why__1">
+          <h2>Beautiful View</h2>
+        </div>
+        <div class="why__2">
+          <h2>Easy Access</h2>
+        </div>
+        <div class="why__3">
+          <h2>It's Free</h2>
+        </div>
+      </section>
+      <section class="review">
+        <h1>What people say</h1>
+        <div class="review__list">
+          <div class="review__item">
+            <h2>asri utami</h2>
+            <p>Tempat rekreasi baru</p>
+          </div>
+          <div class="review__item">
+            <h2>Bahtiyar Gl</h2>
+            <p>XODA BALI</p>
+          </div>
+          <div class="review__item">
+            <h2>adit rokonk</h2>
+            <p>Bungu kasna karangasem bali</p>
+          </div>
+          <div class="review__item">
+            <h2>Arya Wijaya</h2>
+            <p>Natural place, nice view, awesome</p>
+          </div>
+          <div class="review__item">
+            <h2>Jordi Zacarías</h2>
+            <p>Amazing view</p>
+          </div>
+        </div>
+        <img src="src/images/arrow_left.svg" id="revLeft" class="arrow arrow__left" alt="Arrow Left" />
+        <img src="src/images/arrow_left.svg" id="revRight" class="arrow arrow__right" alt="Arrow Right" />
+      </section>
+      <section id="location" class="location">
+        <h1>Location</h1>
+        <div id="mapid"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <h2>Contact Us</h2>
+        <section>
+          Phone:
+            <a href="tel:0821-4400-8944">0821-4400-8944</a>
+        </section>
+        <section>
+          E-mail:
+            <a href="mailto:stikom@stikom-bali.ac.id?subject=Padang Kesna"> stikom@stikom-bali.ac.id</a>
+        </section>
+    </footer>
+    <script src="src/index.js"></script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDWVakzxJSRtpMhMzaX8tt9b2vHc38cpE&libraries=places&callback=initMap"
+    ></script>
+  </body>
+</html>
